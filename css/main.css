@@ -26,11 +26,14 @@ p{
 }
 
 .content {
-	width: 960px;
+	margin: 0 20vw;
 	min-height: calc(100vh - 114px);
-	margin: 0 auto;
 }
-
+@media (max-width: 900px) {
+	.content {
+		margin: 0 5vw;
+	}
+}
 .container1{
 	padding-left:10%; 
 	padding-right:10%;
@@ -82,7 +85,9 @@ p{
 .header{
 	padding-bottom: 100px;
 	padding-top: 30px;
-
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .header a{
@@ -109,7 +114,8 @@ p{
 
 .header nav{
 	float: right;
-	margin-top: 110px;
+	align-self: flex-end;
+	padding-top: 50px;
 
 }
 
@@ -122,9 +128,8 @@ p{
 
 
 .footer{
-	height: 72px;
-	width: 960px;
-	margin: 0 auto;
+	
+
 
 }
 
@@ -135,13 +140,26 @@ p{
 
 .footer li{
 	float: left;
-	display: inline;
 	padding: 0px 0px 0px 15px;
+	display: flex;
+	
 }
 
 .footer nav{
 	float: right;
 	margin-top: 10px;
-
+	
 }
 
+.footer ul {
+	display: flex;
+}
+
+@media (max-width: 900px) {
+	.footer ul {
+		flex-direction: column;
+	}
+	#pannel2 {
+		padding: 50px 10px 120px 10px;
+	}
+}
